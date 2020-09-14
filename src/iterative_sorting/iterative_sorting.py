@@ -8,6 +8,11 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
 
+        #find smallest element move to front
+        #swap the element to where we know its supposed to go
+        #keep track of the boundary between sorted and unsorted
+        #for whatever iteration you are on should be sorted at same #
+        #boundary goes from left ro right, leaving behind sorted elements
 
         # TO-DO: swap
         # Your code here
@@ -18,10 +23,45 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
+    #comapre elements next to each other
+    #swap if neccesary
+    #keep swapping until no longer need to swap
+    #index
+    if not arr:
+        return arr
 
+    total_arr = len(arr) - 1
+    total_sorted = 0
+
+    while total_sorted != total_arr:
+        for num in range(total_arr):
+            comp_arr = [arr[num], arr[num+1]]
+            left = comp_arr[0]
+            right = comp_arr[1]
+
+            if right < left:
+                placehold_left = left
+                left = right
+                right = placehold_left
+                arr[num] = left
+                arr[num+1] = right
+            else:
+                pass
+        #check if all is sorted
+        total_sorted = 0
+        for i in range(total_arr):   
+            
+ 
+            comp_arr = [arr[i], arr[i+1]]
+            left = comp_arr[0]
+            right = comp_arr[1]      
+            if right > left:
+                total_sorted +=1
 
     return arr
 
+
+    
 '''
 STRETCH: implement the Counting Sort function below
 
