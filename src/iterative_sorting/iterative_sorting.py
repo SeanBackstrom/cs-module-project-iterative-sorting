@@ -4,7 +4,7 @@ def selection_sort(arr):
     if not arr:
         return arr
     _sorted = []
-    _unsorted = arr
+    _unsorted = list(arr)
 
     arr_len = len(arr)
 
